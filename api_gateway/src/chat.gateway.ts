@@ -459,7 +459,7 @@ export class ChatGateway implements OnGatewayConnection {
       this.chatClient.send({ cmd: 'inbox_list' }, { userId })
         .subscribe({
           next: (result) => {
-            // ack(result);
+            ack(result);
           },
           error: (error) => {
             console.log('Error inbox list:', error);
